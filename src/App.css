@@ -449,9 +449,13 @@ justify-content: center;
     margin:auto;
     border-radius: 10px;
   }
+.banner-text p{
+font-size: 10px
+}
 
-
-
+.avatar-img{
+  height:150px;
+}
 
 
 
