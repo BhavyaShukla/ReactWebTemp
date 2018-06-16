@@ -5,10 +5,12 @@ import Contact from './contact';
 import Projects from './projects';
 import Resume from './resume';
 import { Switch , Route} from 'react-router-dom';
+import PageTransition from 'react-router-page-transition';
 
 
 
  const Main =() => (
+  
 <Switch>
 <Route exact path="/" component={LandingPage} />
 <Route path="/aboutme" component={AboutMe} />

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Tabs,Tab} from 'react-mdl';
 import {Grid,Cell,Card,CardTitle,CardText,CardActions,Button,CardMenu,IconButton} from 'react-mdl';
+import { CSSTransitionGroup } from 'react-transition-group'
 class Projects extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +12,18 @@ class Projects extends Component {
 
     if(this.state.activeTab === 0){
       return(
+
+        <CSSTransitionGroup
+              component="div"
+              transitionName="example"
+              transitionAppear={true}
+              transitionAppearTimeout={1000}
+              transitionLeaveTimeout={2000}
+              >
+
+
         <div className="projects-grid">
+        <div className="c1 hilla">
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #1</CardTitle>
@@ -27,6 +39,9 @@ class Projects extends Component {
               <IconButton name="share" />
             </CardMenu>
           </Card>
+
+          </div>
+          <div className="c2 hilla">
           {/* Project 2 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #2</CardTitle>
@@ -42,6 +57,8 @@ class Projects extends Component {
               <IconButton name="share" />
             </CardMenu>
           </Card>
+          </div>
+          <div className="c3 hilla">
           {/* Project 3 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
             <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #3</CardTitle>
@@ -57,7 +74,9 @@ class Projects extends Component {
               <IconButton name="share" />
             </CardMenu>
           </Card>
+          </div>
         </div>
+        </CSSTransitionGroup>
       )
     } else if(this.state.activeTab === 1) {
       return (

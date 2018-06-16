@@ -1,9 +1,20 @@
 import React, {Component} from 'react';
 import {Grid,Cell,List,ListItem,ListItemContent} from 'react-mdl';
+import { CSSTransitionGroup } from 'react-transition-group'
 
 class Contact extends Component{
   render(){
     return(
+      <CSSTransitionGroup
+            component="div"
+            transitionName="example"
+            transitionAppear={true}
+            transitionEnterTimeout={600}
+            transitionAppearTimeout={600}
+            transitionLeaveTimeout={400}
+            >
+
+
       <div className="contact-body">
       <Grid className="contact-grid">
         <Cell col={6}>
@@ -50,6 +61,7 @@ class Contact extends Component{
         </Cell>
         </Grid>
       </div>
+         </CSSTransitionGroup>
     )
   }
 }

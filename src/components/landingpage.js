@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import {Grid,Cell} from 'react-mdl'
+import Typing,{Cursor} from 'react-typing-animation';
+
 class Landing extends Component{
   render(){
     return(
+
+
+
       <div style={{width:'100%',margin:'auto'}}>
         <Grid className="landing-grid">
             <Cell col='12'>
@@ -16,9 +21,16 @@ class Landing extends Component{
             <div className="banner-text">
               <h1>Full Stack Web Developer</h1>
                 <hr/>
+                const AnimatedTypingComponent = () => (
+                   <Typing>
+                   <Typing.Delay ms={500} />
+                   <Typing.Speed ms={90} />
+
 
               <p>HTML/CSS | Bootstrap | CSSGRID | CSS3 | JavaScript | React | Polymer | Cordova </p>
 
+                 </Typing>
+                 );
               <div className="social-links">
               {/*LinkedIN*/}
                 <a href="http://www.google.com" target="_blank">
@@ -44,6 +56,7 @@ class Landing extends Component{
             </div>
         </Grid>
       </div>
+
     )
   }
 }

@@ -3,15 +3,25 @@ import {Grid,Cell} from 'react-mdl';
 import Education from './education';
 import Experience from './experience';
 import Skill from './skill';
+import { CSSTransitionGroup } from 'react-transition-group'
 class Resume extends Component{
   render(){
     return(
+      <CSSTransitionGroup
+            component="div"
+            transitionName="resume"
+            transitionAppear={true}
+            transitionEnterTimeout={600}
+            transitionAppearTimeout={600}
+            transitionLeaveTimeout={400}
+            >
     <div>
       <Grid>
        <Cell className="resume-left-col"col={4}>
           <img
             src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png"
             alt="avatar"
+          
             style={{height: '200px'}}
           />
           <h2>Bhavya Shukla</h2>
@@ -81,9 +91,11 @@ class Resume extends Component{
                                   />
 
 
+
        </Cell>
       </Grid>
     </div>
+    </CSSTransitionGroup>
     )
   }
 }
